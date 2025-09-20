@@ -21,12 +21,17 @@ import (
 )
 
 func (s *Tr069Server) initRouter() {
-	s.root.Add(http.MethodPost, "", s.Tr069Index)
-	s.root.Add(http.MethodGet, "/cwmpfiles/:session/:token/:filename", s.Tr069ScriptAlter)
-	s.root.Add(http.MethodGet, "/cwmpfiles/preset/:session/:token/:filename", s.Tr069PresetScriptAlter)
-	s.root.Add(http.MethodGet, "/cwmpfiles/download/:filename", s.Tr069FirmwareDownload)
-	s.root.Add(http.MethodPut, "/cwmpupload/:session/:token/:filename", s.Tr069Upload)
-	s.root.Add(http.MethodPost, "/cwmpupload/:session/:token/:filename", s.Tr069Upload)
+    // 原来的根路径
+    s.root.Add(http.MethodPost, "", s.Tr069Index)
+    
+    // 新增运营商默认路径
+    s.root.Add(http.MethodPost, "/ACS-server/ACS", s.Tr069Index)
+
+    s.root.Add(http.MethodGet, "/cwmpfiles/:session/:token/:filename", s.Tr069ScriptAlter)
+    s.root.Add(http.MethodGet, "/cwmpfiles/preset/:session/:token/:filename", s.Tr069PresetScriptAlter)
+    s.root.Add(http.MethodGet, "/cwmpfiles/download/:filename", s.Tr069FirmwareDownload)
+    s.root.Add(http.MethodPut, "/cwmpupload/:session/:token/:filename", s.Tr069Upload)
+    s.root.Add(http.MethodPost, "/cwmpupload/:session/:token/:filename", s.Tr069Upload)
 }
 
 func (s *Tr069Server) Tr069Upload(c echo.Context) error {
