@@ -26,6 +26,8 @@ func (s *Tr069Server) initRouter() {
     
     // 新增运营商默认路径
     s.root.Add(http.MethodPost, "/ACS-server/ACS", s.Tr069Index)
+	s.root.Add(http.MethodPost, "/RMS-server/RMS", s.Tr069Index)
+	
 
     s.root.Add(http.MethodGet, "/cwmpfiles/:session/:token/:filename", s.Tr069ScriptAlter)
     s.root.Add(http.MethodGet, "/cwmpfiles/preset/:session/:token/:filename", s.Tr069PresetScriptAlter)
