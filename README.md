@@ -7,7 +7,7 @@ Welcome to the TOUGHRADIUS project!
       | |   | |_| | | |_| | | |_| | | | | | | | \ \   / /  | | | |_| | | | | |_| |  ___| | 
       |_|   \_____/ \_____/ \_____/ |_| |_| |_|  \_\ /_/   |_| |_____/ |_| \_____/ /_____/ 
 
-# TOUGHRADIUS-默认的用户名和密码是：admin/toughradius
+# TOUGHRADIUS默认的用户名和密码是：admin/toughradius
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/bi4nbn/toughradius/refs/heads/main/init.sh)"
 ```
