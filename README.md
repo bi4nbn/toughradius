@@ -9,6 +9,10 @@ Welcome to the TOUGHRADIUS project!
 
 # TOUGHRADIUS
 
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/bi4nbn/toughradius/refs/heads/main/init.sh)"
+```
+
 TOUGHRADIUS is committed to providing comprehensive and superior network management solutions.
 The core technology is based on RADIUS and can extend the system functions to support various network protocols, such as TR069.
 TOUGHRADIUS not only provides a user-friendly system interface, but also powerful data analysis and management features such as real-time network monitoring, usage reports and automatic billing. TOUGHRADIUS is dedicated to providing secure, reliable and efficient network management services, enabling them to realize more efficient network operations.
