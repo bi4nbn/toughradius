@@ -40,3 +40,4 @@ jobs:
         with:
           name: toughradius-binary
           path: build/*
+
